@@ -645,6 +645,24 @@ details summary{ list-style:none; cursor:pointer; }
   }
 }
 </script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1599223201702062');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1599223201702062&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
 <body>
 <a class="skip" href="#top">Aller au contenu</a>
@@ -946,5 +964,16 @@ var PACK_CONFIG = {
   onChange(main);
 })();
 </script>
-<script>document.documentElement.classList.add("js");window.addEventListener("load",function(){document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")})})</script></body>
+<script>document.documentElement.classList.add("js");window.addEventListener("load",function(){document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")})})</script>
+<script>
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[href*="mychariow.shop/prd_0wp2mikv/checkout"]');
+  if (!link) return;
+  if (typeof fbq === 'function') {
+    fbq('track', 'InitiateCheckout');
+  }
+});
+</script>
+
+</body>
 </html>
